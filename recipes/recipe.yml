@@ -25,6 +25,7 @@ modules:
       packages:
         - micro
         - starship
+        - gnome-tweaks
     remove:
       packages:
         # removing firefox (in favor of the Brave flatpak)
@@ -40,10 +41,21 @@ modules:
         install: # system flatpaks we want all users to have and not remove
           - com.brave.Browser
           - org.gnome.Loupe
+          - com.mattjakeman.ExtensionManager
       - scope: user # Also add Flathub user repo, but no user packages
 
   - type: gnome-extensions
     install:
       - arcmenu@arcmenu.com
+      - blur-my-shell@aunetx
+      - burn-my-windows@schneegans.github.com
+      - CoverflowAltTab@palatis.blogspot.com
+      - dash2dock-lite@icedman.github.com
+      - dash-to-panel@jderose9.github.com
+      - just-perfection-desktop@just-perfection
+
+  - type: script
+    scripts:
+      - dconf-update.sh
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
