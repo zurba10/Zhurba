@@ -27,7 +27,7 @@ modules:
         - starship
     remove:
       packages:
-        # example: removing firefox (in favor of the flatpak)
+        # removing firefox (in favor of the Brave flatpak)
         # "firefox" is the main package, "firefox-langpacks" is a dependency
         - firefox
         - firefox-langpacks # also remove firefox dependency (not required for all packages, this is a special case)
@@ -38,8 +38,12 @@ modules:
         scope: system
         # If no repo information is specified, Flathub will be used by default
         install: # system flatpaks we want all users to have and not remove
-          - org.mozilla.firefox
+          - com.brave.Browser
           - org.gnome.Loupe
       - scope: user # Also add Flathub user repo, but no user packages
+
+  - type: gnome-extensions
+    install:
+      - arcmenu@arcmenu.com
 
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
