@@ -1,2 +1,2 @@
 [org/gnome/shell]
-enabled-extensions=['arcmenu', 'blur-my-shell', 'coverflow-alt-tab', 'dash-to-panel', 'just-perfection']
+enabled-extensions=['ArcMenu', 'Blur my Shell', 'Coverflow Alt-Tab', 'Dash to Panel', 'Just Perfection']
